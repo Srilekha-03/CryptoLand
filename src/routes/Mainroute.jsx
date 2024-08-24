@@ -8,7 +8,7 @@ const MainRoute = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    Axios.get('https://api.coinlore.net/api/tickers/?start=0&limit=50')
+    Axios.get('https://api.coinlore.net/api/tickers/?start=0&limit=100')
       .then((response) => {
         setCryptolist(response.data.data);
         console.log(response.data.data);
@@ -24,7 +24,7 @@ const MainRoute = () => {
         {cryptolist.map((coin) => (
           <div key={coin.id} onClick={() => navigate(`/currency/${coin.id}`)}>
             <h1>{coin.name}</h1>
-            <h1>{coin.price_usd}</h1>
+            <h1>${coin.price_usd}</h1>
           </div>
         ))}
       </div>
@@ -33,3 +33,4 @@ const MainRoute = () => {
 };
 
 export default MainRoute;
+
