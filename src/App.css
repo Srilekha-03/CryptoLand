@@ -2,36 +2,62 @@
 
 body {
   font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
 }
-
 
 #header {
   text-align: center;
   width: 100%;
-  
+  padding: 20px;
+  background-color: #007BFF;
+  color: white;
   font-size: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cryptolist {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: auto;
-  margin: 5px;
-  
+  padding: 20px;
 }
-.cryptolist div{
+
+.cryptolist div {
   width: 350px;
   height: 200px;
-  border-radius: 20px;
-  box-shadow: 1px 1px 5px black;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   margin: 10px;
   text-align: center;
-  font-size: 20px;
-  font-weight: 300px;
+  background-color: white;
+  transition: box-shadow 0.3s ease;
 }
-.cryptolist div:hover{
+
+.cryptolist div:hover {
   cursor: pointer;
-  box-shadow: 1px 1px 15px black;
+  box-shadow: 0 8px 30px black;
+}
+
+.cryptolist h1 {
+  margin: 10px 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.currency-details {
+  padding: 20px;
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 20px auto;
+  width: 80%;
+}
+
+.currency-details h1 {
+  margin: 10px 0;
+  font-size: 20px;
+  font-weight: 400;
 }

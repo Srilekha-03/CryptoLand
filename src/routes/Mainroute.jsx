@@ -21,14 +21,12 @@ const MainRoute = () => {
         <h1>CRYPTOLAND</h1>
       </div>
       <div className='cryptolist'>
-        {cryptolist.map((coin) => {
-          return (
-            <div key={coin.id} onClick={() => navigate(`/currency/${coin.id}`)}>
-              <h1>{coin.name}</h1>
-              <h1>{coin.price_usd}</h1>
-            </div>
-          );
-        })}
+        {cryptolist.map((coin) => (
+          <div key={coin.id} onClick={() => navigate(`/currency/${coin.id}`)}>
+            <h1>{coin.name}</h1>
+            <h1>{coin.price_usd}</h1>
+          </div>
+        ))}
       </div>
     </>
   );
